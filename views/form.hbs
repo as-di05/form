@@ -1,0 +1,22 @@
+<div class="log_body">
+   <form action="/recovery" method="POST" class='form-1'>
+      <h1 class='header_title'>{{title}}</h1>
+      <div>
+         <label for="recovery" style="color: #fff">Введите ваш e-mail:</label>
+         <p class="field">
+            <input placeholder="primere@exemple.com" name="email" type="text" / class="inputReg">
+            <i class="fa-solid fa-at"></i>
+         </p>
+      </div>
+      {{#if message}}
+      <p class="red_call">{{message}}</p>
+      {{/if}}
+      {{#if messages}}
+      <p class="red_call">{{messages}}</p>
+      {{/if}}
+      <p class="submit">
+         <button type="submit">Запросить письмо</button>
+      </p>
+      <a href="/login" class="link_auth">авторизация</a>
+   </form>
+</div>

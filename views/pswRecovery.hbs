@@ -1,0 +1,40 @@
+<div class="log_body">
+
+   <img class="bg_ellipse rt" src="../bg-ellipse/ellipse-rt.svg" alt="">
+   <img class="bg_ellipse ml" src="../bg-ellipse/ellipse-ml.svg" alt="">
+   <img class="bg_ellipse rb" src="../public/bg-ellipse/ellipse-rb.svg" alt="">
+
+   <div class="main_logo">
+      <img src="/mobile-logo.png" alt="">
+   </div>
+
+   <form action="/recovery/{{id_token}}" method="POST" class='form-1'>
+      <h1 class='header_title'>{{title}}</h1>
+      <div>
+         <label for="pswRecovery" style="color: #fff">Введите новый пароль:</label>
+         <p class="field">
+            <input name="new_psw" type="password" / class="inputReg">
+            {{!-- <i class="fa-solid fa-at"></i> --}}
+         </p>
+      </div>
+      <div>
+         <label for="pswRecovery" style="color: #fff">Повторите пароль:</label>
+         <p class="field">
+            <input name="replace_psw" type="password" / class="inputReg">
+            {{!-- <i class="fa-solid fa-at"></i> --}}
+         </p>
+      </div>
+      {{#if message}}
+      <p class="red_call">{{message}}</p>
+      {{/if}}
+      {{#if messages}}
+      <p class="red_call">{{messages}}</p>
+      {{/if}}
+      <p class="submit">
+         <button type="submit">Сохранить</button>
+      </p>
+      <a href="/login" class="link_auth">авторизация</a>
+   </form>
+</div>
+
+{{> isMobile}}
