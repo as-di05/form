@@ -1,17 +1,154 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Hello world!</title>
-  </head>
-  <body>
-    <h1>User List</h1>
-    <ul>
-      {{#each users}}
-      <li>Name: {{this.name}}</li>
-      <li>Age: {{this.age}}</li>
-      <br />
-      {{/each}}
-    </ul>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АНКЕТА</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="a4">
+      <div class="head_txt">
+        <h3>АНКЕТА ЗАЯВИТЕЛЯ</h3>
+      </div>
+      <div class="date_list">
+        <ul>
+          {{#each request}}
+          <li>Стоимость выбранного товара: {{this.price}}</li>
+          <li>Ф.И.О. {{this.fio}} </li>
+          <li>Номер телефона:+996( ){{this.phone}} </li>
+          <li>Место работы : {{this.place_work}} </li>
+          <li>Должность : {{this.position_work}} </li>
+          <li>Средний заработок: {{this.mid_price}} </li>
+          <li>WhatsApp (указать номер): {{this.whatsapp}} </li>
+          <li>Instagram (указать имя пользователя): {{this.instagram}} </li>
+          <li>Facebook (указать имя пользователя): {{this.facebook}} </li>
+          <li>Место фактического проживания адрес ):<span style="word-wrap: break-word">{{this.address}} </span>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="contact_date">
+        <span>Контактные данные близких родственников</span>
+        <div class="contact_date_block">
+          <div class="contact_date_block_list">
+            <ul>
+              <li>Кем приходится: ______________________</li>
+              <li>Ф.И.О: _______________________________</li>
+              <li>Тел.: ________________________________</li>
+              <li>Адрес проживания: ____________________</li>
+              <li>______________________________________</li>
+            </ul>
+          </div>
+          <div class="contact_date_block_list">
+            <ul>
+              <li>Кем приходится: ______________________</li>
+              <li>Ф.И.О: _______________________________</li>
+              <li>Тел.: ________________________________</li>
+              <li>Адрес проживания: ____________________</li>
+              <li>______________________________________</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer_text">
+        <span>Подтверждаю, что все преставленные мною жанные верны:</span>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
+<!-- 
+  Стоимость выбранного товара: 43
+  Ф.И.О. 63
+  Номер телефона:+996( )fix
+  Место работы : 56
+  Должность : 58
+  Средний заработок: 52
+  WhatsApp (указать номер): 46
+  Instagram (указать имя пользователя): 37
+  Facebook (указать имя пользователя): 37
+  Место фактического проживания адрес ): 104
+
+  Кем приходится: 22
+  Ф.И.О: 31
+  Тел.: 32
+  Адрес проживания: 58
+ -->
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    font-family: "Times New Roman", Times, serif;
+    width: auto;
+    height: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .a4 {
+    width: 170mm;
+    height: 266mm;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(109, 109, 109);
+    padding: 10mm 10mm 20mm 30mm;
+  }
+
+  .head_txt {
+    width: 100%;
+    text-align: center;
+    color: rgb(55, 95, 76);
+  }
+
+  .date_list {
+    font-size: 20px;
+    color: rgb(55, 95, 76);
+  }
+
+  .date_list ul {
+    list-style: none;
+    line-height: 1.8;
+    padding: 0;
+  }
+
+  /* .date_list ul li {
+    display: flex;
+  } */
+
+  .contact_date {
+    margin: 80px 0px;
+    margin-bottom: 150px;
+  }
+
+  .contact_date span {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(55, 95, 76);
+  }
+
+  .contact_date_block_list {
+    display: inline-block;
+  }
+
+  .contact_date_block_list ul {
+    margin-left: 15px;
+    padding: 0;
+    list-style: none;
+    line-height: 1.8;
+    color: rgb(55, 95, 76);
+  }
+
+  .footer_text {
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: rgb(55, 95, 76);
+  }
+</style>

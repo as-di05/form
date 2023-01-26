@@ -21,10 +21,6 @@ app.use('/', indexRouter)
 
 app.set("port", port);
 
-/**
- * Create HTTP server.
- */
-
 var server = http.createServer(app);
 
 server.listen(port, () => {
